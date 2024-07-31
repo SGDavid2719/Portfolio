@@ -1,7 +1,15 @@
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience/Experience";
+import useAppStore from "../../store/app-store";
 
 export function GraphicsContainer() {
+	const { showSection, setShowSection } = useAppStore((state) => ({
+		showSection: state.showSection,
+		setShowSection: state.setShowSection,
+	}));
+
+	console.log("showSection: ", showSection);
+
 	return (
 		<>
 			<Canvas
