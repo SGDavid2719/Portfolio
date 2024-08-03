@@ -9,8 +9,6 @@ export function GraphicsContainer() {
 		setShowSection: state.setShowSection,
 	}));
 
-	console.log("showSection: ", showSection);
-
 	return (
 		<>
 			<Canvas
