@@ -1,0 +1,18 @@
+.link-btn {
+	padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #eab676;
+	transition: background-color 0.3s ease, transform 0.2s ease,
+		box-shadow 0.2s ease;
+	background-color: #333;
+	border: solid 1px #eab676;
+	max-width: fit-content;
+	border-radius: 0.75rem;
+}
+
+.link-btn:hover {
+	opacity: 0.9;
+	transform: scale(1.05);
+	border-color: #ff6f61;
+}

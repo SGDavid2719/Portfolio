@@ -1,14 +1,11 @@
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience/Experience";
-import useAppStore from "../../store/app-store";
-import Modal from "../UI/Modal/Modal";
+import { ExperienceModal } from "../ExperienceModal/ExperienceModal";
+import { ProjectsModal } from "../ProjectsModal/ProjectsModal";
+import { ContactModal } from "../ContactModal/ContactModal";
+import { KnowledgeModal } from "../KnowledgeModal/KnowledgeModal";
 
 export function GraphicsContainer() {
-	const { showSection, setShowSection } = useAppStore((state) => ({
-		showSection: state.showSection,
-		setShowSection: state.setShowSection,
-	}));
-
 	return (
 		<>
 			<Canvas
@@ -24,13 +21,10 @@ export function GraphicsContainer() {
 				<color args={["#171715"]} attach="background" />
 				<Experience />
 			</Canvas>
-			<Modal
-				isOpen={showSection != null}
-				onClose={() => setShowSection(null)}
-				title="Modal's title"
-			>
-				<p>Modal's content</p>
-			</Modal>
+			<ExperienceModal />
+			<ProjectsModal />
+			<ContactModal />
+			<KnowledgeModal />
 		</>
 	);
 }
